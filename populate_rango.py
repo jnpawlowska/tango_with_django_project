@@ -14,7 +14,7 @@ def populate():
     #through each data structure, and add the data to our models.
     
     python_pages = [
-        {'title': 'Official Python tutorial',
+        {'title': 'Official Python Tutorial',
         'url':'http://docs.python.org/3/tutorial/',
         'views':100},
         {'title':'How to Think like a Computer Scientist',
