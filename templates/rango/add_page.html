@@ -7,6 +7,7 @@
 {% block body_block %}
 	<h1>Add a Page</h1>
 	<div>
+		{% if user.is_authenticated %}
 		<form id="page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/">
 			{% csrf_token %}
 			{% csrf_token %}
@@ -20,5 +21,9 @@
 			{% endfor %}
 			<input type="submit" name="submit" value="Add Page" />
 		</form>
+		{% else %}
+			You must be logged in to add a Page.
+			Log in <a href="{% url 'rango:login' %}">here</a>.
+		{% endif %}
 	</div>
 {% endblock %}
